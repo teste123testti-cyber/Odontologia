@@ -1,0 +1,1037 @@
+<!-- PARTE 1 — INÍCIO -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!--
+  ============================================================
+  ODONTO ÔMEGA — Clínica Odontológica (v2 — refinamento premium)
+  Base: versão anterior. Melhorias: espaçamentos, tipografia,
+  animações direcionais, imagens integradas, responsividade.
+  ------------------------------------------------------------
+  • Ao publicar: substitua a URL canônica/OG pelo domínio real
+    e conecte o formulário ao backend (ponto marcado no JS).
+  • Segurança: CSP compatível, honeypot, inputs tratados com
+    textContent, noopener em links externos. Em produção,
+    reforce com cabeçalhos de servidor (HSTS, CSP estrita) e
+    validação server-side.
+  ============================================================
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https://image.qwenlm.ai; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; form-action 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>Odonto Ômega — Clínica Odontológica em Vila Nova Curuçá, São Paulo | Próteses, implantes e estética do sorriso</title>
+<meta name="description" content="Odonto Ômega: Av. Nordestina, 3520 — Vila Nova Curuçá, São Paulo. Promoção especial em próteses dentárias, implantes, clareamento, aparelhos e mais. Parcele em até 12x sem juros. Agende: (11) 92217-2424.">
+<!-- Substitua pelo domínio real ao publicar -->
+<link rel="canonical" href="https://www.odontoomega.com.br/">
+<meta name="theme-color" content="#0f4c5c">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Odonto Ômega — Clínica Odontológica">
+<meta property="og:title" content="Odonto Ômega — Próteses dentárias com condições especiais em Vila Nova Curuçá">
+<meta property="og:description" content="Implantes, próteses, clareamento, aparelhos ortodônticos e mais. Parcele em até 12x sem juros ou ganhe 5% de desconto à vista. Agende pelo WhatsApp (11) 92217-2424.">
+<meta property="og:url" content="https://www.odontoomega.com.br/">
+<meta property="og:image" content="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/72fb1cfe7-ba0c-4db6-baa7-2ade6038b6e76380.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4c5c'/%3E%3Cpath d='M32 18c-4-3.2-9.6-3.6-13.8-1-5.6 3.5-7.2 10.6-5.2 17.3 2 6.9 5.1 17.8 9.3 22 1.4 1.4 3.6.9 4.2-.9 1.1-3.3 2-8 5.5-8s4.4 4.7 5.5 8c.6 1.8 2.8 2.3 4.2.9 4.2-4.2 7.3-15.1 9.3-22 2-6.7.4-13.8-5.2-17.3-4.2-2.6-9.8-2.2-13.8 1Z' fill='%23fff'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/72fb1cfe7-ba0c-4db6-baa7-2ade6038b6e76380.png">
+
+<!-- Schema.org: negócio local (dados do material da clínica) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Odonto Ômega — Clínica Odontológica",
+  "description": "Clínica odontológica em Vila Nova Curuçá, São Paulo. Próteses dentárias, implantes, ortodontia, clareamento, harmonização e mais.",
+  "url": "https://www.odontoomega.com.br/",
+  "telephone": "+55-11-2514-6521",
+  "image": "https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/72fb1cfe7-ba0c-4db6-baa7-2ade6038b6e76380.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Nordestina, 3520 — Vila Nova Curuçá",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/odonto.omega"]
+}
+</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+/* ==========================================================
+   1. TOKENS & BASE
+   ========================================================== */
+:root{
+  --white:#ffffff; --off:#f4f7f8; --paper:#fcfdfd;
+  --ink:#0e2430; --muted:#54707c;
+  --petrol:#0f4c5c; --petrol-dark:#0a3340; --petrol-deep:#082730;
+  --teal:#177e89; --tint:#e2eef0;
+  --gold:#c3a052; --gold-dark:#8f6f2a;
+  --line:#dfe9ec; --wa:#179950;
+  --shadow:0 24px 48px -24px rgba(8,39,48,.28);
+  --shadow-sm:0 12px 28px -16px rgba(8,39,48,.22);
+  --r:18px;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Manrope",system-ui,-apple-system,sans-serif;
+  --header-h:78px;
+  --ease:cubic-bezier(.22,.8,.3,1);
+  --sp-section:clamp(4.75rem,9vw,7.75rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:calc(var(--header-h) + 22px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html,body{overflow-x:clip}
+body{font-family:var(--font-body);color:var(--ink);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer;background:none;border:0;color:inherit}
+ul{list-style:none}
+::selection{background:var(--petrol);color:#fff}
+:focus-visible{outline:3px solid rgba(23,126,137,.55);outline-offset:2px;border-radius:4px}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-thumb{background:var(--petrol);border-radius:8px;border:2px solid #fff}
+::-webkit-scrollbar-track{background:transparent}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+
+.container{width:min(1180px,92%);margin-inline:auto}
+@media (min-width:1600px){.container{width:min(1280px,92%)}}
+.section{padding-block:var(--sp-section)}
+.section--off{background:var(--off)}
+
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.14;letter-spacing:-.012em}
+h1{font-size:clamp(2.5rem,5.2vw,4rem)}
+h2{font-size:clamp(1.9rem,3.5vw,2.75rem)}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--teal)}
+p{color:var(--muted)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.8rem;font-size:.76rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--petrol)}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--gold)}
+.section-head{max-width:660px;margin-bottom:clamp(2.6rem,5vw,3.9rem)}
+.section-head p{margin-top:1.05rem;font-size:1.05rem;max-width:56ch}
+.section-head--center{margin-inline:auto;text-align:center}
+.section-head--center .eyebrow::after{content:"";width:36px;height:1px;background:var(--gold)}
+.section-head--center p{margin-inline:auto}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.75rem;border-radius:999px;font-weight:700;font-size:.86rem;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s;min-height:52px}
+.btn .icon{width:18px;height:18px;flex:none;transition:transform .25s var(--ease)}
+.btn--primary{background:var(--petrol);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--primary:hover{background:var(--petrol-dark);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn--primary:hover .icon{transform:translateX(3px)}
+.btn--ghost{border-color:rgba(15,76,92,.3);color:var(--petrol)}
+.btn--ghost:hover{border-color:var(--petrol);background:var(--tint);transform:translateY(-2px)}
+.btn--gold{background:var(--gold);color:#132229}
+.btn--gold:hover{background:#d4b266;transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn--light{border-color:rgba(255,255,255,.35);color:#fff}
+.btn--light:hover{border-color:#fff;transform:translateY(-2px)}
+
+/* Animações de entrada (variadas) */
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .85s var(--ease),transform .85s var(--ease);transition-delay:var(--d,0s);will-change:opacity,transform}
+.js .reveal-left{transform:translateX(-42px)}
+.js .reveal-right{transform:translateX(42px)}
+.js .reveal-down{transform:translateY(-34px)}
+.js .reveal-zoom{transform:scale(.93) translateY(14px)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ==========================================================
+   2. TOPBAR + HEADER
+   ========================================================== */
+.topbar{background:var(--petrol-deep);color:#cfe2e7;font-size:.83rem}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.55rem;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:.5rem}
+.topbar .icon{width:14px;height:14px;color:var(--gold)}
+.topbar a{color:#cfe2e7;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;transition:color .2s}
+.topbar a:hover{color:#fff;text-decoration:underline}
+@media(max-width:900px){.topbar{display:none}}
+
+.header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.header.scrolled{border-color:var(--line);box-shadow:0 8px 24px -18px rgba(8,39,48,.25)}
+.header .container{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;transition:height .35s var(--ease)}
+.header.scrolled .container{height:66px}
+
+.logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-mark{width:44px;height:44px;flex:none;transition:transform .3s var(--ease)}
+.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
+.logo-text{line-height:1.1}
+.logo-text strong{display:block;font-family:var(--font-display);font-weight:600;font-size:1.22rem;letter-spacing:.06em;color:var(--petrol-dark)}
+.logo-text small{display:block;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dark);font-weight:700}
+
+.nav{display:flex;align-items:center;gap:1.8rem}
+.nav a{font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none;position:relative;padding-block:.4rem;transition:color .25s}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
+.nav a.active{color:var(--petrol)}
+.header-cta{padding:.8rem 1.35rem;min-height:46px;font-size:.78rem}
+.header-cta::after{display:none}
+<!-- PARTE 1 — FIM / PARTE 2 — INÍCIO -->
+.nav-toggle{display:none;flex-direction:column;gap:5px;padding:10px;border-radius:8px}
+.nav-toggle span{width:24px;height:2px;background:var(--petrol-dark);transition:transform .3s,opacity .3s}
+@media(max-width:992px){
+  .nav-toggle{display:flex;z-index:80}
+  .nav{position:fixed;inset:0;background:var(--white);flex-direction:column;justify-content:center;gap:1.3rem;transform:translateX(100%);transition:transform .45s var(--ease);padding:2rem;z-index:70}
+  .nav a{font-family:var(--font-display);font-size:1.55rem;font-weight:500}
+  .nav .header-cta{font-family:var(--font-body);font-size:.85rem;margin-top:1rem}
+  body.menu-open .nav{transform:none}
+  body.menu-open{overflow:hidden}
+  body.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .nav-toggle span:nth-child(2){opacity:0}
+  body.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--petrol);color:#fff;padding:.8rem 1.2rem;z-index:100;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}
+
+/* ==========================================================
+   3. HERO
+   ========================================================== */
+.hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--paper),var(--white))}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero::before{width:560px;height:560px;top:-220px;right:-180px;background:radial-gradient(circle,rgba(23,126,137,.12),transparent 65%)}
+.hero::after{width:420px;height:420px;bottom:-160px;left:-160px;background:radial-gradient(circle,rgba(195,160,82,.14),transparent 65%)}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center;padding-top:clamp(3.2rem,6.5vw,5.8rem);padding-bottom:clamp(5.5rem,10vw,8.25rem)}
+.hero-copy .eyebrow{margin-bottom:1.3rem}
+.hero-copy h1 em{background:linear-gradient(transparent 70%,rgba(195,160,82,.32) 0)}
+.hero-copy p.lead{margin:1.35rem 0 2.1rem;font-size:1.07rem;max-width:33.5rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2.4rem}
+.hero-trust{display:flex;flex-wrap:wrap;gap:1rem 2rem;border-top:1px solid var(--line);padding-top:1.5rem}
+.hero-trust li{display:flex;align-items:center;gap:.6rem;font-size:.88rem;font-weight:700;color:var(--petrol-dark)}
+.hero-trust .icon{width:18px;height:18px;color:var(--gold-dark)}
+
+.hero-media{position:relative}
+.hero-media::before{content:"";position:absolute;inset:0;transform:translate(22px,22px);border:1px solid var(--gold);border-radius:var(--r);opacity:.5}
+.hero-media .frame{position:relative;z-index:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3.35;background:var(--tint)}
+.hero-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.hero-media:hover img{transform:scale(1.05)}
+.hero-badge{position:absolute;z-index:2;left:-1.4rem;bottom:2.2rem;background:#fff;border-radius:14px;box-shadow:var(--shadow-sm);padding:.95rem 1.25rem;border-left:3px solid var(--gold)}
+.hero-badge strong{display:block;font-size:.95rem;color:var(--petrol-dark)}
+.hero-badge small{color:var(--muted);font-size:.78rem}
+.hero-chip{position:absolute;z-index:2;top:1.6rem;right:-.8rem;background:var(--petrol-dark);color:#fff;border-radius:999px;padding:.6rem 1.1rem;font-size:.78rem;font-weight:700;letter-spacing:.06em;display:flex;align-items:center;gap:.5rem;box-shadow:var(--shadow-sm)}
+.hero-chip .icon{width:15px;height:15px;color:var(--gold)}
+@media(max-width:992px){
+  .hero .container{grid-template-columns:1fr;padding-bottom:clamp(5rem,9vw,7rem)}
+  .hero-badge{left:.5rem}
+  .hero-chip{right:.5rem}
+}
+
+/* ==========================================================
+   4. FAIXA DE CONDIÇÕES (sobreposta ao hero)
+   ========================================================== */
+.stats-wrap{position:relative;z-index:5;margin-top:calc(-1 * clamp(3.2rem,6.5vw,5.25rem))}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--white);box-shadow:var(--shadow);overflow:hidden}
+.stat{padding:1.9rem 1.4rem;text-align:center;transition:background .3s}
+.stat:hover{background:var(--paper)}
+.stat + .stat{border-left:1px solid var(--line)}
+.stat-num{font-family:var(--font-display);font-size:clamp(1.8rem,3.3vw,2.55rem);color:var(--petrol);display:block;line-height:1}
+.stat-num .suffix{color:var(--gold-dark)}
+.stat-label{display:block;margin-top:.55rem;font-size:.8rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ==========================================================
+   5. SOBRE
+   ========================================================== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.about-media{position:relative}
+.about-media .main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow);background:var(--tint)}
+.about-media .main img,.about-media .mini img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.about-media .main:hover img,.about-media .mini:hover img{transform:scale(1.05)}
+.about-media .mini{position:absolute;right:-1.1rem;bottom:-1.5rem;width:44%;border-radius:14px;overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow-sm);aspect-ratio:4/3;background:var(--tint)}
+.about-copy p + p{margin-top:1rem}
+.about-points{margin:1.5rem 0 2rem;display:grid;gap:.7rem}
+.about-points li{display:flex;gap:.7rem;align-items:flex-start;font-weight:600;color:var(--petrol-dark)}
+.about-points .icon{width:19px;height:19px;color:var(--gold-dark);flex:none;margin-top:4px}
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .about-media{max-width:560px;margin-inline:auto}
+}
+
+/* ==========================================================
+   6. SERVIÇOS
+   ========================================================== */
+.treatments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.t-card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:1.9rem 1.6rem 1.6rem;display:flex;flex-direction:column;gap:.85rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;overflow:hidden}
+.t-card::before{content:"";position:absolute;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.t-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.t-card:hover::before{transform:scaleX(1)}
+.t-icon{width:54px;height:54px;border-radius:50%;background:var(--tint);color:var(--petrol);display:grid;place-items:center;transition:background .3s,color .3s,transform .35s var(--ease)}
+.t-icon .icon{width:26px;height:26px}
+.t-card:hover .t-icon{background:var(--petrol);color:#fff;transform:scale(1.06) rotate(-4deg)}
+.t-card h3{font-size:1.14rem}
+.t-card p{font-size:.92rem;flex:1}
+.t-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--petrol);text-decoration:none;margin-top:.2rem}
+.t-link .icon{width:16px;height:16px;transition:transform .3s var(--ease)}
+.t-link:hover{color:var(--teal)}
+.t-link:hover .icon{transform:translateX(4px)}
+@media(max-width:1100px){.treatments-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.treatments-grid{grid-template-columns:1fr}}
+
+/* ==========================================================
+   7. PROMOÇÃO PRÓTESES
+   ========================================================== */
+.promo{background:var(--petrol-deep);color:#e8f1f3;overflow:clip}
+.promo .eyebrow{color:var(--gold)}
+.promo h2{color:#fff}
+.promo p{color:#a9c3ca}
+.promo-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.promo-checks{display:grid;grid-template-columns:1fr 1fr;gap:.95rem 1.6rem;margin-top:1.9rem}
+.promo-checks li{display:flex;gap:.6rem;align-items:flex-start;font-weight:700;color:#e8f1f3}
+.promo-checks .icon{width:18px;height:18px;color:var(--gold);flex:none;margin-top:4px}
+.promo-note{margin-top:1.7rem;font-style:italic;font-size:.92rem;color:var(--gold)}
+.offer-card{background:#fff;color:var(--ink);border-radius:var(--r);padding:2.4rem 2.4rem 2.2rem;box-shadow:var(--shadow);position:relative}
+.offer-card::before{content:"";position:absolute;top:-70px;right:-70px;width:210px;height:210px;border-radius:50%;background:radial-gradient(circle,rgba(195,160,82,.28),transparent 70%);pointer-events:none}
+.offer-photo{position:absolute;top:-34px;right:26px;width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);box-shadow:var(--shadow-sm)}
+.offer-card h3{font-size:1.4rem;margin-bottom:.4rem}
+.offer-row{display:flex;align-items:baseline;gap:.9rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
+.offer-row strong{font-family:var(--font-display);font-size:2.25rem;color:var(--petrol);line-height:1;min-width:72px}
+.offer-row span{color:var(--muted);font-size:.95rem;font-weight:600}
+.offer-card .btn{width:100%;margin-top:1.5rem}
+@media(max-width:992px){.promo-grid{grid-template-columns:1fr}.offer-card{max-width:520px}}
+@media(max-width:560px){.promo-checks{grid-template-columns:1fr}}
+
+/* ==========================================================
+   8. DIFERENCIAIS
+   ========================================================== */
+.diff-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.diff-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.8rem 1.6rem;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
+.diff-item:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm);border-color:rgba(195,160,82,.5)}
+.diff-item .icon{width:26px;height:26px;color:var(--teal);margin-bottom:.8rem}
+.diff-item h3{font-size:1.05rem;font-family:var(--font-body);font-weight:800;letter-spacing:0;margin-bottom:.35rem}
+.diff-item p{font-size:.9rem}
+@media(max-width:992px){.diff-list{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.diff-list{grid-template-columns:1fr}}
+
+/* ==========================================================
+   9. PROCESSO
+   ========================================================== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4rem;position:relative}
+.steps::before{content:"";position:absolute;top:33px;left:4%;right:4%;height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));opacity:.4}
+.step{position:relative;padding-top:5rem}
+.step::before{content:"";position:absolute;top:26px;left:0;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--white),0 0 0 6px var(--line)}
+.step-num{font-family:var(--font-display);font-style:italic;font-size:1.08rem;color:var(--gold-dark)}
+.step h3{font-size:1.22rem;margin:.3rem 0 .5rem}
+.step p{font-size:.93rem;max-width:24ch}
+@media(max-width:900px){
+  .steps{grid-template-columns:1fr;gap:0}
+  .steps::before{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto}
+  .step{padding:0 0 2.4rem 2.3rem}
+  .step:last-child{padding-bottom:0}
+  .step::before{top:6px;left:0}
+  .step p{max-width:none}
+}
+
+/* ==========================================================
+   10. CTA (com imagem de fundo)
+   ========================================================== */
+.cta{position:relative;overflow:clip;background:var(--petrol-deep)}
+.cta-media,.cta-media img{position:absolute;inset:0}
+.cta-media img{width:100%;height:100%;object-fit:cover}
+.cta-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,39,48,.93),rgba(8,39,48,.96))}
+.cta::before,.cta::after{content:"";position:absolute;border-radius:50%;z-index:1;pointer-events:none}
+.cta::before{width:520px;height:520px;right:-160px;top:-160px;background:radial-gradient(circle,rgba(195,160,82,.22),transparent 65%)}
+.cta::after{width:420px;height:420px;left:-140px;bottom:-180px;background:radial-gradient(circle,rgba(23,126,137,.25),transparent 65%)}
+.cta .container{position:relative;z-index:2;text-align:center;max-width:780px}
+.cta .eyebrow{color:var(--gold)}
+.cta .eyebrow::before,.cta .eyebrow::after{content:"";width:36px;height:1px;background:var(--gold)}
+.cta h2{color:#fff;margin:1rem 0 1.1rem}
+.cta p{color:#c4d8dd;max-width:38rem;margin:0 auto 2.3rem}
+.cta-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.cta-phone{display:block;margin-top:1.6rem;color:#cfe2e7;font-size:.9rem}
+.cta-phone a{color:#fff;font-weight:700;text-decoration:none;transition:color .2s}
+.cta-phone a:hover{color:var(--gold);text-decoration:underline}
+
+<!-- PARTE 2 — FIM / PARTE 3 — INÍCIO -->
+/* ==========================================================
+   11. FAQ
+   ========================================================== */
+.faq{max-width:800px;margin-inline:auto}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.35rem .2rem;cursor:pointer;list-style:none;font-weight:800;font-size:1.02rem;color:var(--petrol-dark);transition:color .25s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-family:var(--font-display);font-size:1.6rem;line-height:1;color:var(--gold-dark);transition:transform .3s var(--ease);flex:none}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:var(--teal)}
+.faq-answer{padding:0 .2rem 1.45rem;max-width:640px}
+.faq-answer p{font-size:.95rem}
+.js .faq-item[open] .faq-answer{animation:faqIn .35s var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ==========================================================
+   12. CONTATO + FORM
+   ========================================================== */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.info-card{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.info-card:first-child{padding-top:0}
+.info-card .icon{width:22px;height:22px;color:var(--teal);flex:none;margin-top:3px}
+.info-card strong{display:block;font-size:.95rem;color:var(--petrol-dark)}
+.info-card p,.info-card a{font-size:.92rem;color:var(--muted);text-decoration:none}
+.info-card a{transition:color .2s}
+.info-card a:hover{color:var(--petrol);text-decoration:underline}
+.map-box{margin-top:1.8rem;border-radius:var(--r);border:1px solid var(--line);overflow:hidden;aspect-ratio:16/8;position:relative;background:linear-gradient(rgba(223,233,236,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(223,233,236,.6) 1px,transparent 1px),linear-gradient(160deg,#eef4f5,#e2eef0);background-size:34px 34px,34px 34px,cover;display:grid;place-items:center;text-align:center;transition:box-shadow .3s}
+.map-box:hover{box-shadow:var(--shadow-sm)}
+.map-box .icon{width:34px;height:34px;color:var(--petrol);margin:0 auto .5rem}
+.map-box p{font-size:.85rem;max-width:250px;margin-inline:auto}
+.map-box a{display:inline-flex;align-items:center;gap:.4rem;margin-top:.7rem;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--petrol);text-decoration:none}
+.map-box a:hover{text-decoration:underline}
+
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(1.6rem,3vw,2.6rem);box-shadow:var(--shadow-sm)}
+.form-card h3{font-size:1.5rem;margin-bottom:.4rem}
+.form-card > p{font-size:.92rem;margin-bottom:1.7rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field--full{grid-column:1/-1}
+.field label{font-size:.82rem;font-weight:800;letter-spacing:.04em;color:var(--petrol-dark)}
+.field input,.field select,.field textarea{font:inherit;font-size:.95rem;color:var(--ink);border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:.85rem 1rem;transition:border-color .25s,box-shadow .25s;width:100%}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px rgba(23,126,137,.14)}
+.field.invalid input,.field.invalid select{border-color:#b3453f;box-shadow:0 0 0 4px rgba(179,69,63,.12)}
+.field-error{font-size:.78rem;color:#a03a34;font-weight:600}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.form-success{display:none;border:1px solid rgba(23,126,137,.4);background:var(--tint);border-radius:12px;padding:1.1rem 1.3rem;margin-top:1.2rem;font-size:.92rem;color:var(--petrol-dark)}
+.form-success.show{display:block}
+.form-note{margin-top:1rem;font-size:.78rem;font-style:italic}
+@media(max-width:992px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+
+/* ==========================================================
+   13. FOOTER
+   ========================================================== */
+.footer{background:var(--petrol-deep);color:#a9c3ca;font-size:.92rem}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.8rem;padding-block:clamp(3.2rem,6vw,4.6rem)}
+.footer h4{font-family:var(--font-body);font-size:.8rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.15rem}
+.footer a{color:#a9c3ca;text-decoration:none;display:inline-block;padding-block:.16rem;transition:color .2s}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer .logo-text strong{color:#fff}
+.footer-desc{margin:1rem 0 1.4rem;max-width:290px}
+.footer-social{display:flex;gap:.7rem}
+.footer-social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.footer-social a:hover{background:var(--petrol);border-color:var(--petrol);text-decoration:none;transform:translateY(-3px)}
+.footer-social .icon{width:17px;height:17px}
+.footer li{padding-block:.16rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;align-items:center;font-size:.8rem}
+.footer-bottom button{color:#a9c3ca;text-decoration:underline;font-size:.8rem}
+.footer-bottom button:hover{color:#fff}
+@media(max-width:992px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+/* ==========================================================
+   14. FLUTUANTES / DIALOGS
+   ========================================================== */
+.wa-float{position:fixed;right:1.2rem;bottom:1.2rem;z-index:65;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(23,153,80,.6);transition:transform .3s var(--ease)}
+.wa-float:hover{transform:translateY(-3px) scale(1.04)}
+.wa-float .icon{width:28px;height:28px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:waPulse 2.4s ease-out infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+
+dialog{border:0;border-radius:var(--r);padding:0;max-width:560px;width:92%;box-shadow:var(--shadow)}
+dialog::backdrop{background:rgba(8,39,48,.55)}
+.dialog-body{padding:2.2rem}
+.dialog-body h3{font-size:1.5rem;margin-bottom:1rem;color:var(--petrol-dark)}
+.dialog-body p{font-size:.93rem;margin-bottom:.8rem}
+.dialog-close{position:absolute;top:.9rem;right:.9rem;width:40px;height:40px;border-radius:50%;background:var(--off);display:grid;place-items:center;font-size:1.2rem;color:var(--petrol-dark);transition:background .2s}
+.dialog-close:hover{background:var(--tint)}
+
+/* ==========================================================
+   15. MOVIMENTO REDUZIDO
+   ========================================================== */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .js .reveal,.js .reveal-left,.js .reveal-right,.js .reveal-down,.js .reveal-zoom{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+  .wa-float::before{display:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.3C10.2 3.8 7.7 3.4 5.8 4.6 3.2 6.2 2.5 9.4 3.4 12.4c.9 3.1 2.3 7.9 4.2 9.8.6.6 1.6.4 1.9-.4.5-1.5.9-3.6 2.5-3.6s2 2.1 2.5 3.6c.3.8 1.3 1 1.9.4 1.9-1.9 3.3-6.7 4.2-9.8.9-3 .2-6.2-2.4-7.8-1.9-1.2-4.4-.8-6.2.7Z"/></symbol>
+  <symbol id="i-root" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.3C10.2 3.8 7.7 3.4 5.8 4.6 3.2 6.2 2.5 9.4 3.4 12.4c.9 3.1 2.3 7.9 4.2 9.8.6.6 1.6.4 1.9-.4.5-1.5.9-3.6 2.5-3.6s2 2.1 2.5 3.6c.3.8 1.3 1 1.9.4 1.9-1.9 3.3-6.7 4.2-9.8.9-3 .2-6.2-2.4-7.8-1.9-1.2-4.4-.8-6.2.7Z"/><path d="M12 7.5c-.6 3-.6 6.5 0 9.5"/></symbol>
+  <symbol id="i-toothplus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.3C10.2 3.8 7.7 3.4 5.8 4.6 3.2 6.2 2.5 9.4 3.4 12.4c.9 3.1 2.3 7.9 4.2 9.8.6.6 1.6.4 1.9-.4.5-1.5.9-3.6 2.5-3.6s2 2.1 2.5 3.6c.3.8 1.3 1 1.9.4 1.9-1.9 3.3-6.7 4.2-9.8.9-3 .2-6.2-2.4-7.8-1.9-1.2-4.4-.8-6.2.7Z"/><path d="M12 8v5M9.5 10.5h5"/></symbol>
+  <symbol id="i-denture" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c0-4.6 3.6-7.5 8-7.5s8 2.9 8 7.5"/><path d="M4 12v1.5c0 1.4 1.1 2.5 2.5 2.5h11c1.4 0 2.5-1.1 2.5-2.5V12"/><path d="M8 12v4M12 12v4M16 12v4"/></symbol>
+  <symbol id="i-extract" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M9.2 5.8 12 3l2.8 2.8"/><path d="M12 12.5c-1.4-1-3.2-1.2-4.6-.3-1.9 1.2-2.4 3.5-1.7 5.7.6 2.1 1.6 5.5 3 6.9.4.4 1.2.3 1.4-.3.4-1.1.7-2.5 1.9-2.5s1.5 1.4 1.9 2.5c.2.6 1 .7 1.4.3 1.4-1.4 2.4-4.8 3-6.9.7-2.2.2-4.5-1.7-5.7-1.4-.9-3.2-.7-4.6.3Z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l1.8 5.2L19 11l-5.2 1.8L12 18l-1.8-5.2L5 11l5.2-1.8L12 4Z"/><path d="M19 17v4M17 19h4"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3h7l-1 4h-5l-1-4Z"/><path d="M9.5 7h5l-.6 3h-3.8l-.6-3ZM10.1 10h3.8l-.5 3h-2.8l-.5-3ZM10.6 13h2.8l-.4 3h-2l-.4-3Z"/><path d="M11 16l1 5 1-5"/></symbol>
+  <symbol id="i-braces" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 12h16M4 16h16"/><rect x="10" y="10" width="4" height="4" rx="1"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l4 6-9 12L3 9l4-6Z"/><path d="M3 9h18M9.5 9 12 21 14.5 9M9.5 9 12 3l2.5 6"/></symbol>
+  <symbol id="i-lips" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9.8c-1.8-2-4.5-2.4-6.4-1C3.9 10 3 11.4 3 12c2.7 3.9 5.7 5.8 9 5.8s6.3-1.9 9-5.8c0-.6-.9-2-2.6-3.2-1.9-1.4-4.6-1-6.4 1Z"/><path d="M3 12h18"/></symbol>
+  <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m19 3 2 2M17.5 4.5l2 2L10 16l-2-2 9.5-9.5Z"/><path d="M8.5 15.5 4 20M13.5 8.5 15 10M11.5 10.5 13 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l1.5 4.5L8.2 10a12.5 12.5 0 0 0 5.8 5.8l1.5-2.3L20 15v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M7 12h10"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01" stroke-width="2.6"/></symbol>
+</svg>
+
+<!-- ============ TOPBAR ============ -->
+<div class="topbar">
+  <div class="container">
+    <span><svg class="icon"><use href="#i-pin"/></svg> Av. Nordestina, 3520 · Vila Nova Curuçá — São Paulo/SP</span>
+    <span><a href="tel:+551125146521"><svg class="icon"><use href="#i-phone"/></svg> (11) 2514-6521</a> &nbsp;·&nbsp; <a href="https://wa.me/5511922172424" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-wa"/></svg> (11) 92217-2424</a></span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="siteHeader">
+  <div class="container">
+    <a class="logo" href="#inicio" aria-label="Odonto Ômega — página inicial">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f4c5c"/><path d="M32 18c-4-3.2-9.6-3.6-13.8-1-5.6 3.5-7.2 10.6-5.2 17.3 2 6.9 5.1 17.8 9.3 22 1.4 1.4 3.6.9 4.2-.9 1.1-3.3 2-8 5.5-8s4.4 4.7 5.5 8c.6 1.8 2.8 2.3 4.2.9 4.2-4.2 7.3-15.1 9.3-22 2-6.7.4-13.8-5.2-17.3-4.2-2.6-9.8-2.2-13.8 1Z" fill="#fff"/></svg>
+      <span class="logo-text"><strong>ODONTO ÔMEGA</strong><small>clínica odontológica</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-controls="primaryMenu" aria-expanded="false" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="primaryMenu" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#clinica">A Clínica</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#proteses">Próteses</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn--primary header-cta" href="#contato">Agendar consulta</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" aria-label="Apresentação da clínica">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Odonto Ômega · Clínica Odontológica</span>
+      <h1 class="reveal" style="--d:.08s">Seu sorriso merece um <em>cuidado extraordinário.</em></h1>
+      <p class="lead reveal" style="--d:.16s">Na Odonto Ômega, você encontra atendimento odontológico completo em Vila Nova Curuçá: da limpeza aos implantes, das próteses à estética do sorriso — com condições que cabem no seu bolso.</p>
+      <div class="hero-actions reveal" style="--d:.24s">
+        <a class="btn btn--primary" href="https://wa.me/5511922172424?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20%C3%94mega." target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#i-wa"/></svg> Agendar avaliação
+        </a>
+        <a class="btn btn--ghost" href="#servicos">Conhecer serviços</a>
+      </div>
+      <ul class="hero-trust reveal" style="--d:.32s">
+        <li><svg class="icon"><use href="#i-check"/></svg> Até 12x sem juros</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> 5% de desconto à vista</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Todos os tipos de próteses</li>
+      </ul>
+    </div>
+
+<!-- PARTE 3 — FIM / PARTE 4 — INÍCIO -->
+<div class="hero-media reveal reveal-right" style="--d:.15s">
+      <span class="hero-chip"><svg class="icon"><use href="#i-scan"/></svg> Promoção: próteses dentárias</span>
+      <div class="frame">
+        <img src="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/72fb1cfe7-ba0c-4db6-baa7-2ade6038b6e76380.png" alt="Dentista apresentando uma radiografia digital a uma paciente durante avaliação na clínica" fetchpriority="high">
+      </div>
+      <div class="hero-badge">
+        <strong>Av. Nordestina, 3520</strong>
+        <small>Vila Nova Curuçá · São Paulo/SP</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONDIÇÕES DO PANFLETO ============ -->
+<div class="stats-wrap container reveal reveal-down">
+  <div class="stats" aria-label="Condições especiais da clínica">
+    <div class="stat"><span class="stat-num">12<span class="suffix">x</span></span><span class="stat-label">Parcelamento sem juros</span></div>
+    <div class="stat"><span class="stat-num">5<span class="suffix">%</span></span><span class="stat-label">De desconto à vista</span></div>
+    <div class="stat"><span class="stat-num">8</span><span class="stat-label">Tipos de próteses</span></div>
+    <div class="stat"><span class="stat-num">12</span><span class="stat-label">Serviços especializados</span></div>
+  </div>
+</div>
+
+<!-- ============ SOBRE ============ -->
+<section class="section" id="clinica">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media reveal reveal-left">
+        <div class="main"><img src="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/52fb1cfe7-ba0c-4db6-baa7-2ade6038b6e77264.png" alt="Sala de atendimento odontológico com equipamentos modernos e ambiente acolhedor" loading="lazy" decoding="async"></div>
+        <div class="mini"><img src="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/02fb1cfe7-ba0c-4db6-baa7-2ade6038b6e72888.png" alt="Consultório odontológico com mobiliário em tons de verde-petróleo" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="about-copy reveal reveal-right" style="--d:.1s">
+        <span class="eyebrow">A Clínica</span>
+        <h2 style="margin-top:1rem">Cuidar do seu sorriso é <em>cuidar de você.</em></h2>
+        <p style="margin-top:1.2rem">A Odonto Ômega está na Av. Nordestina, 3520, em Vila Nova Curuçá (São Paulo/SP), oferecendo atendimento odontológico completo para você e sua família.</p>
+        <p>Da limpeza aos implantes, das próteses à estética do sorriso, reunimos os principais cuidados em um só lugar — com parcelamento em até 12x sem juros e 5% de desconto à vista.</p>
+        <ul class="about-points">
+          <li><svg class="icon"><use href="#i-check"/></svg> Todos os tipos de próteses dentárias</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> 12 serviços reunidos em um só lugar</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Agendamento fácil pelo WhatsApp</li>
+        </ul>
+        <a class="btn btn--ghost" href="#proteses">Ver promoção de próteses</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section section--off" id="servicos">
+  <div class="container">
+    <div class="section-head section-head--center reveal reveal-down">
+      <span class="eyebrow">Nossos serviços</span>
+      <h2>Excelência em cada <em>especialidade.</em></h2>
+      <p>Os cuidados completos que a sua saúde bucal e o seu sorriso merecem.</p>
+    </div>
+    <div class="treatments-grid">
+      <article class="t-card reveal" style="--d:.02s"><span class="t-icon"><svg class="icon"><use href="#i-implant"/></svg></span><h3>Implantes</h3><p>Soluções modernas para reposição de dentes com segurança.</p><a class="t-link" href="#contato" data-treatment="Implantes">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.08s"><span class="t-icon"><svg class="icon"><use href="#i-root"/></svg></span><h3>Tratamento de Canal</h3><p>Cuidado completo para aliviar a dor e preservar o dente.</p><a class="t-link" href="#contato" data-treatment="Tratamento de Canal">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.14s"><span class="t-icon"><svg class="icon"><use href="#i-extract"/></svg></span><h3>Extrações</h3><p>Procedimentos realizados com técnica e tranquilidade.</p><a class="t-link" href="#contato" data-treatment="Extrações">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.2s"><span class="t-icon"><svg class="icon"><use href="#i-drop"/></svg></span><h3>Limpeza</h3><p>Higienização profissional para prevenir e manter a saúde bucal.</p><a class="t-link" href="#contato" data-treatment="Limpeza">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.02s"><span class="t-icon"><svg class="icon"><use href="#i-denture"/></svg></span><h3>Próteses</h3><p>Todos os tipos de próteses, com promoção especial.</p><a class="t-link" href="#contato" data-treatment="Próteses">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.08s"><span class="t-icon"><svg class="icon"><use href="#i-gem"/></svg></span><h3>Lentes em Resina</h3><p>Estética do sorriso com resultado natural.</p><a class="t-link" href="#contato" data-treatment="Lentes em resina">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.14s"><span class="t-icon"><svg class="icon"><use href="#i-tooth"/></svg></span><h3>Endodontia</h3><p>Tratamento especializado da parte interna do dente.</p><a class="t-link" href="#contato" data-treatment="Endodontia">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.2s"><span class="t-icon"><svg class="icon"><use href="#i-spark"/></svg></span><h3>Clareamento</h3><p>Procedimentos para realçar a aparência do seu sorriso.</p><a class="t-link" href="#contato" data-treatment="Clareamento">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.02s"><span class="t-icon"><svg class="icon"><use href="#i-toothplus"/></svg></span><h3>Restauração</h3><p>Recuperação da forma e da função dos dentes.</p><a class="t-link" href="#contato" data-treatment="Restauração">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.08s"><span class="t-icon"><svg class="icon"><use href="#i-braces"/></svg></span><h3>Aparelhos Ortodônticos</h3><p>Alinhamento e correção da mordida para todas as idades.</p><a class="t-link" href="#contato" data-treatment="Aparelhos ortodônticos">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.14s"><span class="t-icon"><svg class="icon"><use href="#i-lips"/></svg></span><h3>Preenchimento Labial</h3><p>Harmonização com procedimentos estéticos especializados.</p><a class="t-link" href="#contato" data-treatment="Preenchimento labial">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+      <article class="t-card reveal" style="--d:.2s"><span class="t-icon"><svg class="icon"><use href="#i-syringe"/></svg></span><h3>Toxina Botulínica</h3><p>Procedimentos estéticos para a região orofacial.</p><a class="t-link" href="#contato" data-treatment="Toxina botulínica">Saiba mais <svg class="icon"><use href="#i-arrow"/></svg></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMOÇÃO PRÓTESES ============ -->
+<section class="section promo" id="proteses">
+  <div class="container promo-grid">
+    <div class="reveal reveal-left">
+      <span class="eyebrow">Promoção especial</span>
+      <h2 style="margin-top:1rem">Próteses <em style="color:var(--gold)">Dentárias.</em></h2>
+      <p style="margin-top:1.2rem">São todos os tipos de próteses para devolver ao seu sorriso a função, o conforto e a estética que você merece.</p>
+      <ul class="promo-checks">
+        <li><svg class="icon"><use href="#i-check"/></svg> Sobre implante</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Acrílica flexível</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Protocolo</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Parcial</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Branemark</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Total</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Grampo</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Coroas</li>
+      </ul>
+      <p class="promo-note">Trabalhamos com todos os tipos de próteses.</p>
+    </div>
+    <div class="offer-card reveal reveal-right" style="--d:.12s">
+      <img class="offer-photo" src="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/52fb1cfe7-ba0c-4db6-baa7-2ade6038b6e71593.png" alt="Sorriso restaurado com prótese dentária — resultado ilustrativo" loading="lazy" decoding="async">
+      <h3>Condições especiais</h3>
+      <div class="offer-row"><strong>12x</strong><span>Parcele seu tratamento em até 12x sem juros.</span></div>
+      <div class="offer-row" style="border-bottom:0"><strong>5%</strong><span>De desconto para pagamento à vista.</span></div>
+      <a class="btn btn--gold" href="https://wa.me/5511922172424?text=Ol%C3%A1!%20Vi%20a%20promo%C3%A7%C3%A3o%20de%20pr%C3%B3teses%20dent%C3%A1rias%20da%20Odonto%20%C3%94mega%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer">
+        <svg class="icon"><use href="#i-wa"/></svg> Aproveitar promoção
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="section" id="diferenciais">
+  <div class="container">
+    <div class="section-head section-head--center reveal reveal-down">
+      <span class="eyebrow">Diferenciais</span>
+      <h2>Por que escolher a <em>Odonto Ômega?</em></h2>
+    </div>
+    <div class="diff-list">
+      <div class="diff-item reveal" style="--d:.02s"><svg class="icon"><use href="#i-denture"/></svg><h3>Todos os tipos de próteses</h3><p>Sobre implante, protocolo, Branemark, grampo, acrílica flexível, parcial, total e coroas.</p></div>
+      <div class="diff-item reveal" style="--d:.08s"><svg class="icon"><use href="#i-check"/></svg><h3>Até 12x sem juros</h3><p>Parcele seu tratamento em até 12 vezes sem juros e comece a sorrir agora.</p></div>
+      <div class="diff-item reveal" style="--d:.14s"><svg class="icon"><use href="#i-spark"/></svg><h3>5% de desconto à vista</h3><p>Condição especial para quem prefere pagar à vista.</p></div>
+      <div class="diff-item reveal" style="--d:.02s"><svg class="icon"><use href="#i-toothplus"/></svg><h3>Atendimento completo</h3><p>Da limpeza aos implantes e à estética: 12 serviços reunidos em um só lugar.</p></div>
+      <div class="diff-item reveal" style="--d:.08s"><svg class="icon"><use href="#i-wa"/></svg><h3>Agendamento pelo WhatsApp</h3><p>Fale direto com a equipe pelo (11) 92217-2424 e escolha o melhor horário.</p></div>
+      <div class="diff-item reveal" style="--d:.14s"><svg class="icon"><use href="#i-pin"/></svg><h3>Fácil acesso</h3><p>Estamos na Av. Nordestina, 3520 — Vila Nova Curuçá, São Paulo/SP.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="section section--off" id="processo">
+  <div class="container">
+    <div class="section-head section-head--center reveal reveal-down">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Sua jornada, <em>passo a passo.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal" style="--d:.02s"><span class="step-num">01 —</span><h3>Agendamento</h3><p>Entre em contato pelo WhatsApp ou telefone e escolha o melhor horário.</p></div>
+      <div class="step reveal" style="--d:.1s"><span class="step-num">02 —</span><h3>Avaliação</h3><p>O profissional entende suas necessidades e examina sua saúde bucal.</p></div>
+      <div class="step reveal" style="--d:.18s"><span class="step-num">03 —</span><h3>Planejamento</h3><p>Você recebe um plano de tratamento claro, com valores e condições de pagamento.</p></div>
+      <div class="step reveal" style="--d:.26s"><span class="step-num">04 —</span><h3>Tratamento</h3><p>Você recebe acompanhamento durante todo o processo, até o resultado final.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta" aria-label="Agende sua avaliação">
+  <div class="cta-media" aria-hidden="true"><img src="https://image.qwenlm.ai/public_source/36085a35-a9f9-4843-a190-836b455cff62/42fb1cfe7-ba0c-4db6-baa7-2ade6038b6e76681.png" alt="" loading="lazy" decoding="async"></div>
+  <div class="cta-overlay" aria-hidden="true"></div>
+  <div class="container reveal reveal-zoom">
+    <span class="eyebrow">Agende hoje</span>
+    <h2>Pronto para cuidar do <em style="color:var(--gold)">seu sorriso?</em></h2>
+    <p>Fale com a nossa equipe pelo WhatsApp ou visite-nos na Av. Nordestina, 3520 — Vila Nova Curuçá, São Paulo/SP.</p>
+    <div class="cta-actions">
+      <a class="btn btn--gold" href="https://wa.me/5511922172424?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20%C3%94mega." target="_blank" rel="noopener noreferrer">
+        <svg class="icon"><use href="#i-wa"/></svg> Agendar minha avaliação
+      </a>
+      <a class="btn btn--light" href="#servicos">Ver serviços</a>
+    </div>
+    <p class="cta-phone">WhatsApp: <a href="https://wa.me/5511922172424" target="_blank" rel="noopener noreferrer">(11) 92217-2424</a> · Telefone: <a href="tel:+551125146521">(11) 2514-6521</a></p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head section-head--center reveal reveal-down">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Podemos <em>ajudar?</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details class="faq-item"><summary>Onde fica a clínica?</summary><div class="faq-answer"><p>Estamos na Av. Nordestina, 3520 — Vila Nova Curuçá, São Paulo/SP.</p></div></details>
+      <details class="faq-item"><summary>Preciso agendar antes de ir à clínica?</summary><div class="faq-answer"><p>Sim, o atendimento é feito com hora marcada. Agende pelo WhatsApp (11) 92217-2424 ou pelo telefone (11) 2514-6521.</p></div></details>
+      <details class="faq-item"><summary>Quais tratamentos são oferecidos?</summary><div class="faq-answer"><p>Implantes, tratamento de canal, extrações, limpeza, próteses, lentes em resina, endodontia, clareamento, restauração, aparelhos ortodônticos, preenchimento labial e toxina botulínica.</p></div></details>
+      <details class="faq-item"><summary>Quais tipos de próteses vocês fazem?</summary><div class="faq-answer"><p>Sobre implante, protocolo, Branemark, grampo, acrílica flexível, parcial, total e coroas. Trabalhamos com todos os tipos de próteses.</p></div></details>
+      <details class="faq-item"><summary>Como funcionam o parcelamento e o desconto?</summary><div class="faq-answer"><p>Você pode parcelar seu tratamento em até 12x sem juros ou aproveitar 5% de desconto para pagamento à vista.</p></div></details>
+      <details class="faq-item"><summary>Quanto custa o tratamento?</summary><div class="faq-answer"><p>Os valores dependem de cada caso. Na avaliação, você recebe um orçamento claro, com as condições de parcelamento em até 12x sem juros ou desconto à vista.</p></div></details>
+      <details class="faq-item"><summary>Como faço para agendar pelo WhatsApp?</summary><div class="faq-answer"><p>Toque em qualquer botão de WhatsApp do site ou envie uma mensagem para (11) 92217-2424. Nossa equipe responderá com os melhores horários disponíveis.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- PARTE 4 — FIM / PARTE 5 — INÍCIO -->
+<!-- ============ CONTATO ============ -->
+<section class="section section--off" id="contato">
+  <div class="container">
+    <div class="section-head reveal reveal-down">
+      <span class="eyebrow">Contato</span>
+      <h2>Venha nos <em>conhecer.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal reveal-left">
+        <div class="info-card"><svg class="icon"><use href="#i-pin"/></svg><div><strong>Endereço</strong><p>Av. Nordestina, 3520 — Vila Nova Curuçá<br>São Paulo/SP</p></div></div>
+        <div class="info-card"><svg class="icon"><use href="#i-phone"/></svg><div><strong>Telefone</strong><a href="tel:+551125146521">(11) 2514-6521</a></div></div>
+        <div class="info-card"><svg class="icon"><use href="#i-wa"/></svg><div><strong>WhatsApp</strong><a href="https://wa.me/5511922172424?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20%C3%94mega." target="_blank" rel="noopener noreferrer">(11) 92217-2424</a></div></div>
+        <div class="info-card"><svg class="icon"><use href="#i-insta"/></svg><div><strong>Instagram</strong><a href="https://www.instagram.com/odonto.omega" target="_blank" rel="noopener noreferrer">@odonto.omega</a></div></div>
+        <div class="info-card"><svg class="icon"><use href="#i-clock"/></svg><div><strong>Horários de atendimento</strong><p>Consulte os horários disponíveis pelo WhatsApp ou telefone.</p></div></div>
+
+        <div class="map-box">
+          <div>
+            <svg class="icon"><use href="#i-pin"/></svg>
+            <p><strong>Vila Nova Curuçá · São Paulo</strong><br>Av. Nordestina, 3520</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Nordestina,+3520+-+Vila+Nova+Curu%C3%A7a,+S%C3%A3o+Paulo+-+SP" target="_blank" rel="noopener noreferrer">Como chegar <svg class="icon" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-right" style="--d:.1s">
+        <h3>Agende sua avaliação</h3>
+        <p>Preencha os dados abaixo e nossa equipe entrará em contato. Campos marcados com * são obrigatórios.</p>
+        <form id="bookingForm" novalidate>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label for="f-nome">Nome completo *</label>
+              <input id="f-nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
+              <p class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefone / WhatsApp *</label>
+              <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="numeric" maxlength="16" required>
+              <p class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-email">E-mail</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120">
+              <p class="field-error" hidden></p>
+            </div>
+            <div class="field field--full">
+              <label for="f-trat">Serviço de interesse</label>
+              <select id="f-trat" name="tratamento">
+                <option value="">Ainda não sei</option>
+                <option>Implantes</option><option>Tratamento de Canal</option><option>Extrações</option>
+                <option>Limpeza</option><option>Próteses</option><option>Lentes em resina</option>
+                <option>Endodontia</option><option>Clareamento</option><option>Restauração</option>
+                <option>Aparelhos ortodônticos</option><option>Preenchimento labial</option><option>Toxina botulínica</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-data">Data preferencial</label>
+              <input id="f-data" name="data" type="date">
+              <p class="field-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="f-periodo">Horário preferencial</label>
+              <select id="f-periodo" name="periodo">
+                <option value="">Tanto faz</option>
+                <option>Manhã</option><option>Tarde</option><option>Noite</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="f-msg">Mensagem</label>
+              <textarea id="f-msg" name="mensagem" maxlength="600" placeholder="Conte brevemente o que você precisa (opcional)"></textarea>
+            </div>
+            <input class="hp" type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true">
+          </div>
+          <button class="btn btn--primary" type="submit" style="width:100%;margin-top:1.4rem">Enviar solicitação</button>
+          <p class="form-success" id="formSuccess" role="status"></p>
+          <p class="form-note">Se preferir, agende direto pelo WhatsApp: (11) 92217-2424.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Voltar ao início">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f4c5c"/><path d="M32 18c-4-3.2-9.6-3.6-13.8-1-5.6 3.5-7.2 10.6-5.2 17.3 2 6.9 5.1 17.8 9.3 22 1.4 1.4 3.6.9 4.2-.9 1.1-3.3 2-8 5.5-8s4.4 4.7 5.5 8c.6 1.8 2.8 2.3 4.2.9 4.2-4.2 7.3-15.1 9.3-22 2-6.7.4-13.8-5.2-17.3-4.2-2.6-9.8-2.2-13.8 1Z" fill="#fff"/></svg>
+          <span class="logo-text"><strong>ODONTO ÔMEGA</strong><small>clínica odontológica</small></span>
+        </a>
+        <p class="footer-desc">Atendimento odontológico completo em Vila Nova Curuçá — com promoção especial em próteses dentárias e parcelamento em até 12x sem juros.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/odonto.omega" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Odonto Ômega"><svg class="icon"><use href="#i-insta"/></svg></a>
+          <a href="https://wa.me/5511922172424" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Odonto Ômega"><svg class="icon"><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <nav aria-label="Links rápidos">
+        <h4>Links rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#clinica">A Clínica</a></li>
+          <li><a href="#proteses">Promoção de Próteses</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Serviços">
+        <h4>Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Implantes</a></li>
+          <li><a href="#servicos">Próteses</a></li>
+          <li><a href="#servicos">Clareamento</a></li>
+          <li><a href="#servicos">Aparelhos ortodônticos</a></li>
+          <li><a href="#servicos">Lentes em resina</a></li>
+          <li><a href="#servicos">Preenchimento labial</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li>Av. Nordestina, 3520</li>
+          <li>Vila Nova Curuçá · São Paulo/SP</li>
+          <li><a href="tel:+551125146521">(11) 2514-6521</a></li>
+          <li><a href="https://wa.me/5511922172424" target="_blank" rel="noopener noreferrer">(11) 92217-2424 (WhatsApp)</a></li>
+          <li><a href="https://www.instagram.com/odonto.omega" target="_blank" rel="noopener noreferrer">@odonto.omega</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yearNow">2026</span> Odonto Ômega — Clínica Odontológica. Todos os direitos reservados.</span>
+      <span>
+        <button data-dialog-open="dialog-privacy">Política de Privacidade</button> ·
+        <button data-dialog-open="dialog-terms">Termos de Uso</button>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5511922172424?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Odonto%20%C3%94mega." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp da Odonto Ômega">
+  <svg class="icon"><use href="#i-wa"/></svg>
+</a>
+
+<dialog id="dialog-privacy" aria-labelledby="priv-title">
+  <div class="dialog-body">
+    <button class="dialog-close" data-dialog-close aria-label="Fechar">×</button>
+    <h3 id="priv-title">Política de Privacidade</h3>
+    <p>Os dados informados no formulário são utilizados exclusivamente para entrar em contato sobre o seu agendamento, em conformidade com a LGPD.</p>
+    <p>Não compartilhamos seus dados com terceiros. Para solicitar a exclusão das suas informações, fale com a equipe pelo WhatsApp (11) 92217-2424.</p>
+  </div>
+</dialog>
+
+<dialog id="dialog-terms" aria-labelledby="terms-title">
+  <div class="dialog-body">
+    <button class="dialog-close" data-dialog-close aria-label="Fechar">×</button>
+    <h3 id="terms-title">Termos de Uso</h3>
+    <p>As informações deste site têm caráter informativo. Condições de pagamento e promoção de próteses conforme divulgação da clínica; valores e indicações de tratamento são definidos na avaliação profissional.</p>
+  </div>
+</dialog>
+
+<!-- PARTE 5 — FIM / PARTE 6 — INÍCIO -->
+<script>
+(function(){
+  'use strict';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* Header: estado ao rolar */
+  var header = $('#siteHeader');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Menu mobile */
+  var toggle = $('#navToggle'), menu = $('#primaryMenu');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  }
+  toggle.addEventListener('click', function(){ setMenu(!document.body.classList.contains('menu-open')); });
+  $$('a', menu).forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 992) setMenu(false); });
+
+  /* Revelação ao entrar na viewport (direções variadas) */
+  var revealEls = $$('.reveal');
+  if(reduced || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -48px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Destaque do item ativo no menu (scrollspy) */
+  var navLinks = $$('.nav a[href^="#"]').filter(function(a){ return !a.classList.contains('header-cta'); });
+  var spyMap = {};
+  navLinks.forEach(function(a){
+    var sec = document.getElementById(a.getAttribute('href').slice(1));
+    if(sec) spyMap[sec.id] = a;
+  });
+  if(!reduced && 'IntersectionObserver' in window){
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          navLinks.forEach(function(a){ a.classList.remove('active'); });
+          if(spyMap[en.target.id]) spyMap[en.target.id].classList.add('active');
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    Object.keys(spyMap).forEach(function(id){ sio.observe(document.getElementById(id)); });
+  }
+
+  /* FAQ: um aberto por vez */
+  $$('.faq-item').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open) $$('.faq-item').forEach(function(o){ if(o !== d) o.open = false; });
+    });
+  });
+
+  /* "Saiba mais" pré-seleciona o serviço no formulário */
+  var treatSelect = $('#f-trat');
+  $$('[data-treatment]').forEach(function(link){
+    link.addEventListener('click', function(){
+      var v = link.getAttribute('data-treatment');
+      if(treatSelect){
+        for(var i = 0; i < treatSelect.options.length; i++){
+          if(treatSelect.options[i].text === v){ treatSelect.selectedIndex = i; break; }
+        }
+      }
+    });
+  });
+
+  /* Dialogs */
+  $$('[data-dialog-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var d = document.getElementById(btn.getAttribute('data-dialog-open'));
+      if(!d) return;
+      if(typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open','');
+    });
+  });
+  $$('[data-dialog-close]').forEach(function(btn){
+    btn.addEventListener('click', function(){ btn.closest('dialog').close(); });
+  });
+  $$('dialog').forEach(function(d){
+    d.addEventListener('click', function(e){ if(e.target === d) d.close(); });
+  });
+
+  /* Formulário */
+  var form = $('#bookingForm');
+  var success = $('#formSuccess');
+  var dateField = $('#f-data');
+  if(dateField) dateField.min = new Date().toISOString().split('T')[0];
+
+  function maskPhone(v){
+    v = v.replace(/\D/g,'').slice(0,11);
+    if(v.length > 10) return '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+    if(v.length > 6)  return '(' + v.slice(0,2) + ') ' + v.slice(2,6) + '-' + v.slice(6);
+    if(v.length > 2)  return '(' + v.slice(0,2) + ') ' + v.slice(2);
+    return v;
+  }
+  var tel = $('#f-tel');
+  if(tel) tel.addEventListener('input', function(){ tel.value = maskPhone(tel.value); });
+
+  function setError(input, msg){
+    var field = input.closest('.field');
+    var err = field ? field.querySelector('.field-error') : null;
+    field.classList.toggle('invalid', !!msg);
+    if(err){ err.textContent = msg || ''; err.hidden = !msg; }
+  }
+  ['f-nome','f-tel','f-email','f-data'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('input', function(){ setError(el, ''); });
+  });
+
+  if(form) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    success.classList.remove('show');
+
+    /* Honeypot anti-spam */
+    if(form.elements.empresa && form.elements.empresa.value){
+      success.textContent = 'Solicitação recebida. Em breve entraremos em contato.';
+      success.classList.add('show'); form.reset(); return;
+    }
+
+    var ok = true, first = null;
+    var nome = $('#f-nome'), email = $('#f-email');
+
+    if(!nome.value.trim() || nome.value.trim().length < 3){ setError(nome,'Informe seu nome completo.'); ok = false; first = first || nome; }
+    var digits = tel.value.replace(/\D/g,'');
+    if(digits.length < 10){ setError(tel,'Informe um telefone válido com DDD.'); ok = false; first = first || tel; }
+    if(email.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){ setError(email,'Informe um e-mail válido.'); ok = false; first = first || email; }
+    if(dateField.value && dateField.min && dateField.value < dateField.min){ setError(dateField,'Escolha uma data a partir de hoje.'); ok = false; first = first || dateField; }
+
+    if(!ok){ if(first) first.focus(); return; }
+
+    /* =========================================================
+       INTEGRAÇÃO FUTURA COM BACKEND
+       var FORM_ENDPOINT = null; // ex.: '/api/agendamento'
+       if(FORM_ENDPOINT){ fetch(FORM_ENDPOINT, {method:'POST', ...}) }
+       Valide e sanitize todos os campos também no servidor.
+       ========================================================= */
+    success.textContent = 'Obrigado, ' + nome.value.trim().split(' ')[0] + '! Recebemos sua solicitação. Se preferir agilizar, chame no WhatsApp (11) 92217-2424.';
+    success.classList.add('show');
+    form.reset();
+    success.scrollIntoView({block:'nearest', behavior: reduced ? 'auto' : 'smooth'});
+  });
+
+  /* Ano do rodapé */
+  var y = $('#yearNow');
+  if(y) y.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
+<!-- PARTE 6 — FIM -->
+
+
